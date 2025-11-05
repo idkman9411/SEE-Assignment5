@@ -28,6 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: target/reports/checkstyle.html
+          overwrite: true
 
       - name: Run Maven Test
         run: mvn test
@@ -36,3 +37,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: target/site/jacoco/index.html
+          overwrite: true
