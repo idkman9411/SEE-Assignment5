@@ -102,13 +102,13 @@ class AmazonIntegrationTest {
     @Test
     public void testDelivery() { //has some always true conditions
         ShoppingCartAdaptor cart = new ShoppingCartAdaptor(db);
-        List<PriceRule> rules = new ArrayList<PriceRule>();
+        List<PriceRule> rules = new ArrayList<>();
         rules.add(new DeliveryPrice());
 
         Amazon ama = new Amazon(cart, rules);
 
 
-        ama.addToCart(new Item(ItemType.OTHER, "galaxy phonecase", 1, 10));
+        ama.addToCart(new Item(ItemType.OTHER, "galaxy phoneCase", 1, 10));
         ama.addToCart(new Item(ItemType.OTHER, "belt", 1, 1));
         ama.addToCart(new Item(ItemType.OTHER, "bat", 2, 9));
         ama.addToCart(new Item(ItemType.OTHER, "toy", 3, 8));

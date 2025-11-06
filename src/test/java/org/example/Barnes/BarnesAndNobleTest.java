@@ -80,9 +80,6 @@ Book memoir = new Book("456", 6, 0);
     when(bd1.findByISBN("123")).thenReturn(pennyDred);
     when(bd1.findByISBN("456")).thenReturn(comic);
 
-    //verify(bbp,times(1)).buyBook(pennyDred,2);
-    //verify(bbp,times(1)).buyBook(comic,4);
-
     BarnesAndNoble bAndN1 = new BarnesAndNoble(bd1,bbp1);
     assertNull(bAndN1.getPriceForCart(null));
 

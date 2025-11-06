@@ -160,7 +160,7 @@ class AmazonUnitTest {
     public void testDelivery() { //has some always true conditions
         ShoppingCart cart = mock(ShoppingCart.class);
         when(cart.getItems()).thenReturn(List.of());
-        List<PriceRule> rules = new ArrayList<PriceRule>();
+        List<PriceRule> rules = new ArrayList<>();
         rules.add(new DeliveryPrice());
 
         Amazon ama = new Amazon(cart, rules);
